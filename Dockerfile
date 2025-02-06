@@ -10,6 +10,8 @@ COPY . /myapp
 #gradle은 설치되어 있는 gradle을 이용해서 빌드, gradlew는 프로젝트에 포함된 gradle을 이용
 #CICD에서는 gradlew를 이용해서 작업
 #-x test -> test를 제외하고 작업
+#실행권한 추가
+RUN chmod +x gradlew
 RUN ./gradlew clean build --no-daemon -x test
 
 FROM openjdk:17-alpine
