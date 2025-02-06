@@ -17,4 +17,3 @@ WORKDIR /myapp
 COPY --from=build /myapp/build/libs/*.jar /myapp/orderservice.jar
 EXPOSE 9200
 ENTRYPOINT ["java","-jar","orderservice.jar"]
-
